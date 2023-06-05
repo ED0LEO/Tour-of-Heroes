@@ -14,11 +14,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { CommonModule } from '@angular/common';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
@@ -32,6 +35,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
+    HeroFormComponent,
   ],
   bootstrap: [AppComponent],
 })
